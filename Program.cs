@@ -52,6 +52,11 @@ namespace Calculation
 
                         // division
                         case "/":
+                            if (secondNumber == 0)
+                            {
+                                Console.WriteLine("You can't divide by zero");
+                            }
+                            else                       
                             Console.WriteLine(value: $"Your result is: " +
                                 $"{MyCalc.DivisionOperation(firstNumber, secondNumber)}");
                             break;
@@ -64,6 +69,10 @@ namespace Calculation
 
                         // square
                         case "%":
+                            if (secondNumber == 0)
+                            {
+                                Console.WriteLine("It makes no sence");
+                            }
                             Console.WriteLine(value: $"Your result is: " +
                                 $"{MyCalc.ModuleOperation(firstNumber, secondNumber)}");
                             break;
